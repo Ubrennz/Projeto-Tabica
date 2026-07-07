@@ -47,7 +47,7 @@ public class Teste {
         }
 
         System.out.println();
-        System.out.println("Encerrando o MilTek. Até a próxima!");
+        System.out.println("Encerrando o teste. Até a próxima!");
         scanner.close();
     }
 
@@ -83,13 +83,7 @@ public class Teste {
         boolean continuar = true;
         while (continuar) {
             System.out.println();
-            System.out.println("--- PRODUTORES ---");
-            System.out.println("1 - Cadastrar");
-            System.out.println("2 - Listar todos");
-            System.out.println("3 - Buscar por id");
-            System.out.println("4 - Atualizar");
-            System.out.println("5 - Deletar");
-            System.out.println("0 - Voltar");
+            printsMenu("--- PRODUTORES ---");
             String opcao = lerTexto("Escolha uma opção");
 
             switch (opcao) {
@@ -163,13 +157,7 @@ public class Teste {
         boolean continuar = true;
         while (continuar) {
             System.out.println();
-            System.out.println("--- ANIMAIS ---");
-            System.out.println("1 - Cadastrar");
-            System.out.println("2 - Listar todos");
-            System.out.println("3 - Buscar por id");
-            System.out.println("4 - Atualizar");
-            System.out.println("5 - Deletar");
-            System.out.println("0 - Voltar");
+            printsMenu("--- ANIMAIS ---");
             String opcao = lerTexto("Escolha uma opção");
 
             switch (opcao) {
@@ -245,13 +233,7 @@ public class Teste {
         boolean continuar = true;
         while (continuar) {
             System.out.println();
-            System.out.println("--- ORDENHAS ---");
-            System.out.println("1 - Cadastrar");
-            System.out.println("2 - Listar todas");
-            System.out.println("3 - Buscar por id");
-            System.out.println("4 - Atualizar");
-            System.out.println("5 - Deletar");
-            System.out.println("0 - Voltar");
+            printsMenu("--- ORDENHAS ---");
             String opcao = lerTexto("Escolha uma opção");
 
             switch (opcao) {
@@ -325,13 +307,7 @@ public class Teste {
         boolean continuar = true;
         while (continuar) {
             System.out.println();
-            System.out.println("--- LATICÍNIOS ---");
-            System.out.println("1 - Cadastrar");
-            System.out.println("2 - Listar todos");
-            System.out.println("3 - Buscar por id");
-            System.out.println("4 - Atualizar");
-            System.out.println("5 - Deletar");
-            System.out.println("0 - Voltar");
+            printsMenu("--- LATICÍNIOS ---");
             String opcao = lerTexto("Escolha uma opção");
 
             switch (opcao) {
@@ -404,13 +380,7 @@ public class Teste {
         boolean continuar = true;
         while (continuar) {
             System.out.println();
-            System.out.println("--- OFERTAS DE LEITE ---");
-            System.out.println("1 - Cadastrar");
-            System.out.println("2 - Listar todas");
-            System.out.println("3 - Buscar por id");
-            System.out.println("4 - Atualizar");
-            System.out.println("5 - Deletar");
-            System.out.println("0 - Voltar");
+            printsMenu("--- OFERTAS DE LEITE ---");
             String opcao = lerTexto("Escolha uma opção");
 
             switch (opcao) {
@@ -498,6 +468,16 @@ public class Teste {
         repoOrdenha.listarTodos().forEach(System.out::println);
         repoLaticinio.listarTodos().forEach(System.out::println);
         repoOferta.listarTodos().forEach(System.out::println);
+    }
+
+    private static void printsMenu(String linha) {
+        System.out.println(linha);
+        System.out.println("1 - Cadastrar");
+        System.out.println("2 - Listar todas");
+        System.out.println("3 - Buscar por id");
+        System.out.println("4 - Atualizar");
+        System.out.println("5 - Deletar");
+        System.out.println("0 - Voltar");
     }
 
     private static String lerTexto(String rotulo) {
